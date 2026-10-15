@@ -4,6 +4,7 @@ Agent::Agent(NeuralNetwork network): actor(network) {}
 
 ActionResult Agent::get_action(const PendulumState& state, float base_force)
 {
+    
     return {};
     /*
     std::vector<float> output = actor.forwardpass(state);

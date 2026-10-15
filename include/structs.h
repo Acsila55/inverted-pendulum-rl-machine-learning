@@ -3,6 +3,7 @@
 
 #include <cmath>
 #include <vector>
+#include <array>
 
 #define PI 3.14159265358979323846264338327950288419
 #define GRAVITY 919.f
@@ -46,6 +47,10 @@ struct PendulumState {
                                  
     PendulumState(float sin, float cos, float bob_speed, float anchor_speed, float anchor_pos)
         : sin(sin), cos(cos), bob_speed(bob_speed), anchor_speed(anchor_speed), anchor_posx_norm(anchor_pos) {}
+
+    std::array<float, 5> get_attributes() const{
+        return {sin, cos, bob_speed, anchor_speed, anchor_posx_norm};
+    }
 };                               
 
 struct ForwardsCache {

@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <iostream>
 
+
 struct ActionResult
 {
     float raw_sample;
