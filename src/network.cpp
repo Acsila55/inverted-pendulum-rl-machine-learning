@@ -89,8 +89,9 @@ std::vector<float> NeuralNetwork::softmax(const std::vector<float>& input)
 
 //forwardpass of networks from inputlayer to output layer
 //return non activated output layer
-std::vector<float> NeuralNetwork::forwardpass(const P_state& state)
+std::vector<float> NeuralNetwork::forwardpass(const PendulumState& state)
 {
+    /*
     float temp_sum;
     std::vector<float> input(state.data, state.data + 5);
     std::vector<float> output(state.data, state.data + 5);
@@ -122,12 +123,14 @@ std::vector<float> NeuralNetwork::forwardpass(const P_state& state)
     }
     output = layer;
     return output;
+    */
 }
 
 // same as normal forwardpass just caching every layer to pre/post_activation vectors
-std::vector<float> NeuralNetwork::forwardpass_cached(const P_state& state)
+std::vector<float> NeuralNetwork::forwardpass_cached(const PendulumState& state)
 {
-        float temp_sum;
+    /*
+    float temp_sum;
     std::vector<float> input(state.data, state.data + 5);
     std::vector<float> output(state.data, state.data + 5);
 
@@ -165,4 +168,5 @@ std::vector<float> NeuralNetwork::forwardpass_cached(const P_state& state)
     }
     output = layer;
     return output;
+    */
 }

@@ -1,6 +1,6 @@
 #ifndef NETWORK_H
 #define NETWORK_H
-#include "P_state.h"
+#include "structs.h"
 #include <stdexcept>
 #include <iostream>
 #include <vector>
@@ -22,13 +22,14 @@ private:
     
     
 public:
+
     static float ReLU(float x);
     static std::vector<float> softmax(const std::vector<float>& input);
     NeuralNetwork(const std::vector<int>& architecture);
     void validate_architecture(const std::vector<int>& architecture);
     
-    std::vector<float> forwardpass(const P_state& input);
-    std::vector<float> forwardpass_cached(const P_state& input);
+    std::vector<float> forwardpass(const PendulumState& input);
+    std::vector<float> forwardpass_cached(const PendulumState& input);
     void backwardpass();
     float loss_func();
     void backpass();
